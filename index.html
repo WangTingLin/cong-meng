@@ -261,6 +261,24 @@
       white-space: nowrap;
     }
     .session-reg:hover { opacity: 0.8; }
+  
+    .season-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(26,24,22,0.18);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .season-pill.active-pill {
+      background: var(--ink);
+      color: var(--gold);
+      border-color: var(--ink);
+    }
   </style>
 </head>
 <body>
@@ -354,6 +372,126 @@
       </div>
 
 
+      <div class="accordion">
+        <div class="btn-link accordion-toggle" onclick="toggleAccordion(this)">
+          <div class="btn-icon accent"><i class="fa-solid fa-book-open"></i></div>
+          <div class="btn-body">
+            <div style="font-size:0.65rem;font-weight:700;color:var(--muted);letter-spacing:0.08em;margin-bottom:1px;">社會博雅講座</div>
+            <div class="btn-title">歷屆講堂</div>
+          </div>
+          <i class="fa-solid fa-chevron-down btn-arrow accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <div style="display:flex;gap:6px;padding:2px 0 10px;">
+            <button onclick="switchSeason(this,'s114h2')" class="season-pill active-pill">114年下半季</button>
+            <button onclick="switchSeason(this,'s115h1')" class="season-pill">115年上半季</button>
+          </div>
+          <div id="s114h2" class="season-group">
+            <div class="session-card">
+              <div class="session-date">05.10<br>六</div>
+              <div class="session-body">
+                <div class="session-title">阿祖去哪兒補習？──臺灣書院的今昔</div>
+                <div class="session-meta">張崑將 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">06.28<br>六</div>
+              <div class="session-body">
+                <div class="session-title">備試‧調適‧不適——古代科考生活中的怪現象</div>
+                <div class="session-meta">金培懿 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">07.12<br>六</div>
+              <div class="session-body">
+                <div class="session-title">關公讀的是什麼書？騎的是什麼馬？耍的是什麼刀？——關聖信仰面面談</div>
+                <div class="session-meta">林盈翔 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">08.16<br>六</div>
+              <div class="session-body">
+                <div class="session-title">有種孝順，詩人說了算——杜甫詩中的孝思</div>
+                <div class="session-meta">徐國能 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">09.13<br>六</div>
+              <div class="session-body">
+                <div class="session-title">男二才是真老大——由伊尹、周公談權臣主導政局的幾種模式</div>
+                <div class="session-meta">車行健 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">10.18<br>六</div>
+              <div class="session-body">
+                <div class="session-title">韓國歐爸去哪裡？——朝鮮燕行使眼中的異世界</div>
+                <div class="session-meta">林侑毅 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">11.29<br>六</div>
+              <div class="session-body">
+                <div class="session-title">要確欸……換個角度看古代寓言故事</div>
+                <div class="session-meta">田富美 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">12.20<br>六</div>
+              <div class="session-body">
+                <div class="session-title">孫悟空！Who are you？——從《西遊記》美猴王成王談起</div>
+                <div class="session-meta">李志宏 老師</div>
+              </div>
+            </div>
+          </div>
+          <div id="s115h1" class="season-group" style="display:none;">
+            <div class="session-card">
+              <div class="session-date">01.31<br>六</div>
+              <div class="session-body">
+                <div class="session-title">有一種美學莊子懂──放心遊世</div>
+                <div class="session-meta">劉滄龍 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">02.28<br>六</div>
+              <div class="session-body">
+                <div class="session-title">小人麥來！防小人攻略：《左傳》有教，有沒有在聽？</div>
+                <div class="session-meta">黃聖松 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">03.21<br>六</div>
+              <div class="session-body">
+                <div class="session-title">咚得隆咚鏘！戲說忠孝節義</div>
+                <div class="session-meta">張曉生 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">04.18<br>六</div>
+              <div class="session-body">
+                <div class="session-title">老派心理師秘技──儒道教你不焦慮</div>
+                <div class="session-meta">楊自平 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">05.23<br>六</div>
+              <div class="session-body">
+                <div class="session-title">我的青春小鳥一樣……飛出去──少女杜麗娘讀經</div>
+                <div class="session-meta">汪詩珮 老師</div>
+              </div>
+            </div>
+            <div class="session-card">
+              <div class="session-date">06.13<br>六</div>
+              <div class="session-body">
+                <div class="session-title">吃人「禮」教？儒家告訴我們的那些生命禮義</div>
+                <div class="session-meta">孫致文 老師</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <a href="https://www.tkbsteam.com.tw/EDM/CMsummercampindex/index.html" target="_blank" rel="noopener" class="btn-link">
         <div class="btn-icon accent"><i class="fa-solid fa-school"></i></div>
         <div class="btn-body">
@@ -401,7 +539,15 @@
   </div>
 
   <script>
-    function toggleAccordion(el) {
+  
+  function switchSeason(btn, id) {
+    btn.parentElement.querySelectorAll('.season-pill').forEach(function(p){ p.classList.remove('active-pill'); });
+    btn.classList.add('active-pill');
+    var wrap = btn.closest('.accordion-content');
+    wrap.querySelectorAll('.season-group').forEach(function(d){ d.style.display = 'none'; });
+    document.getElementById(id).style.display = '';
+  }
+  function toggleAccordion(el) {
       el.classList.toggle('open');
       el.nextElementSibling.classList.toggle('open');
     }
